@@ -16,3 +16,5 @@ RUN apt-get install -y libz-dev && \
 RUN curl -sS https://getcomposer.org/installer | php \
     && mv composer.phar /usr/local/bin/composer \
     && chmod +x /usr/local/bin/composer
+
+ADD add-ssh-private-key /usr/local/bin/
