@@ -1,6 +1,7 @@
 FROM laradock/php-fpm:2.6.1-7.4
 
-RUN apt-get install -y libz-dev git && \
+RUN apt-get update && \
+    apt-get install -y libz-dev git && \
     pecl install grpc && \
     docker-php-ext-enable grpc && \
     curl -sLO http://ftp.tw.debian.org/debian/pool/main/libz/libzip/libzip-dev_1.5.1-4_amd64.deb && \
