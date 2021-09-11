@@ -1,4 +1,4 @@
-FROM laradock/php-fpm:2.7-7.4
+FROM laradock/php-fpm:latest-8.0
 
 RUN apt-get update && \
     apt-get install -y libz-dev git openssh-client libzip-dev
