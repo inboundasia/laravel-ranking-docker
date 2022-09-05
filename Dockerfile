@@ -3,7 +3,8 @@ FROM laradock/php-fpm:latest-8.1
 RUN apt-get update && \
     apt-get install -y libz-dev git openssh-client libzip-dev
 
-RUN pecl install grpc mongodb && \
+RUN pecl install grpc && \
+    pecl install mongodb && \
     docker-php-ext-enable grpc mongodb && \
     docker-php-ext-install zip && \
     docker-php-ext-install sockets && \
